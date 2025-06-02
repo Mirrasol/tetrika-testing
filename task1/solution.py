@@ -20,6 +20,5 @@ def strict(func):
                 raise TypeError(
                     f'Argument {new_arg}: wrong type, expected type {protofunc_arg.annotation}'
                 )
-        result = func(*args)
-        return result
+        return func(*args)
     return wrapper
