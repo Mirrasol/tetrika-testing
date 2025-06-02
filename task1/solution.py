@@ -14,8 +14,12 @@ def strict(func):
                 continue
             else:
                 if protofunc_arg.annotation == 'inspect._empty':
-                    raise TypeError(f'No annotation provided for argument {new_arg}')
-                raise TypeError(f'Argument {new_arg}: wrong type, expected type {protofunc_arg.annotation}')
+                    raise TypeError(
+                        f'No annotation provided for argument {new_arg}'
+                    )
+                raise TypeError(
+                    f'Argument {new_arg}: wrong type, expected type {protofunc_arg.annotation}'
+                )
         result = func(*args)
         return result
     return wrapper
