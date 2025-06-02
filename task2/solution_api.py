@@ -1,3 +1,8 @@
+"""Get animals data by using Wikipedia API and write it into a csv file.
+Since API doesn't provide distinct letter categories,
+relies fully on the animal's first letter and it's alphabetical relevance
+(ex. 'Пингвин Гумбольта' goes under the letter 'П').
+"""
 import csv
 from collections import defaultdict
 

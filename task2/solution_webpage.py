@@ -1,3 +1,7 @@
+"""Get animals data by parsing a Wikipedia webpage
+and write it into a csv file. Relies on Wikipedia's letter categories
+shown on the webpage (ex. 'Пингвин Гумбольта' goes under the letter 'Г').
+"""
 import csv
 from collections import defaultdict
 
