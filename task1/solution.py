@@ -5,6 +5,9 @@ import inspect
 def strict(func):
     """A decorator to check if function's arguments are
     in accordance with their annotations.
+    Returns TypeError if no annotation was set for parameters
+    in the protofunction or if the arguments' types don't match
+    their protofunction annotations.
     """
     @functools.wraps(func)
     def wrapper(*args):
