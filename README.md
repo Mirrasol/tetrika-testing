@@ -10,5 +10,3 @@
 [Задача 1](task1/task1.md)   
 [Задача 2](task2/task2.md)  
 [Задача 3](task3/task3.md)
-
-link: `https://gitlab.com/heiwa.local/tetrika-junior/-/tree/main`
