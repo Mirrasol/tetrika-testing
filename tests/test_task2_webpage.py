@@ -7,7 +7,7 @@ import pytest
 from task2.solution_webpage import get_animals_data, write_csv
 
 
-def test_get_animals_data_single_page(mock_general_response):
+def test_get_animals_data(mock_general_response):
     with patch('requests.get', return_value=mock_general_response):
         animals_count = defaultdict(int)
         get_animals_data('https://mocked_url', animals_count)
