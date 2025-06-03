@@ -21,7 +21,7 @@ def strict(func):
                         f'No annotation provided for argument {new_arg}'
                     )
                 raise TypeError(
-                    f'Argument {new_arg}: wrong type, expected type {protofunc_arg.annotation}'
+                    f'Argument {new_arg}: wrong type, expected type {protofunc_arg.annotation}'  # noqa: E501
                 )
         return func(*args)
     return wrapper

@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-import pytest
+import pytest  # noqa: F401
 
 from task2.solution_api import get_animals_data, write_csv
 

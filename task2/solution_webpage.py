@@ -5,7 +5,7 @@ shown on the webpage (ex. 'Пингвин Гумбольта' goes under the let
 import csv
 from collections import defaultdict
 
-import lxml
+import lxml  # noqa: F401
 import requests
 from bs4 import BeautifulSoup
 
@@ -29,7 +29,7 @@ def get_animals_data(url: str, result_dict: dict):
         response.encoding = 'utf-8'
         soup = BeautifulSoup(response.text, 'lxml')
 
-        animals_on_page = soup.find('div', id='mw-pages').find_all('div', class_='mw-category-group')
+        animals_on_page = soup.find('div', id='mw-pages').find_all('div', class_='mw-category-group')  # noqa: E501
         animal_categories = [category for category in animals_on_page]
         
         for category in animal_categories:
@@ -41,7 +41,7 @@ def get_animals_data(url: str, result_dict: dict):
                 alphabet_end_flag = 'End'
                 break
         
-        next_page = [link['href'] for link in soup.find_all('a', title='Категория:Животные по алфавиту')
+        next_page = [link['href'] for link in soup.find_all('a', title='Категория:Животные по алфавиту')  # noqa: E501
                      if link.text == 'Следующая страница'][0]
         url = f'https://ru.wikipedia.org{next_page}'
 

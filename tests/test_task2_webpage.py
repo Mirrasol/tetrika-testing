@@ -1,8 +1,8 @@
 from collections import defaultdict
 from unittest.mock import patch
 
-import lxml
-import pytest
+import lxml  # noqa: F401
+import pytest  # noqa: F401
 
 from task2.solution_webpage import get_animals_data, write_csv
 

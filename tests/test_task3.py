@@ -1,4 +1,4 @@
-import pytest
+import pytest  # noqa: F401
 
 from task3.solution import (
     appearance,
